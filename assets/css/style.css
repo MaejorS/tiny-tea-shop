@@ -7,9 +7,23 @@
     font-family: "Poppins", sans-serif;
 }
 
+
 body {
-    min-height: 100vh;
-    background: url('../css/images/hero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    /*background: url('../css/images/hero.jpg') no-repeat center center/cover;
+   */
+}
+
+main {
+    margin-top: 1px;
+}
+
+.content {
+    flex: 1;
+    
 }
 
 /* General Styles */
@@ -18,10 +32,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #023618;
+    background-color: #AD9BFA;
     padding: 10px 20px;
     color: white;
     text-decoration: none;
+}
+
+.content {
+    flex: 1;
 }
 
 h1 {
@@ -91,17 +109,62 @@ h1 {
         border-bottom: 1px solid #444;
     }
 
+    .navbar li:hover {
+        text-decoration: underline;
+        text-decoration-color: #ffffff;
+    }
+
+    .active {
+        border-bottom: 3px solid #3a3a3a;
+    }
+
+
+
+/* Footer */
+
+footer {
+    background-color: #AD9BFA;
+    display: flex;
+    flex-direction: column;
+}
+
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks li {
+    font-size: 160%;
+    padding: 1%;
+    color: #3a3a3a
+}
+
+
+
 
 /* Media query: tablets and larger (768px and up) */
 @media (min-width: 768px) {
     /* For larger screens, display the menu inline and hide the hamburger icon */
+    
+    header div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
     .nav-toggle-label {
         display: none;
     }
 
+
     .navbar {
         display: flex;
         justify-content: flex-end; /* Aligns the menu to the right */
+        
     }
 
     .navbar ul {
@@ -114,7 +177,7 @@ h1 {
     }
 
     .navbar a {
-        padding: 10px 20px;
+        padding: 10px 30px;
     }
 }
 
