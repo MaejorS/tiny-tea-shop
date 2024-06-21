@@ -13,13 +13,18 @@ body {
     display: flex;
     flex-direction: column;
     background-color: aqua;
-    /*background: url('../css/images/hero.jpg') no-repeat center center/cover;
-   */
+    background: url('../css/images/bwtea.jpg') no-repeat center center/cover;
+   
 }
 
 main {
-    margin-top: 1px;
+    margin-top: 5px;
 }
+
+.hero div[
+    height
+    
+]
 
 .content {
     flex: 1;
@@ -32,7 +37,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #AD9BFA;
+    background-color: #151517;
     padding: 10px 20px;
     color: white;
     text-decoration: none;
@@ -42,8 +47,8 @@ main {
     flex: 1;
 }
 
-h1 {
-    color: white;
+header h1 {
+    color: #ffffff;
 }
 
 #logo {
@@ -114,16 +119,10 @@ h1 {
         text-decoration-color: #ffffff;
     }
 
-    .active {
-        border-bottom: 3px solid #3a3a3a;
-    }
-
-
-
 /* Footer */
 
 footer {
-    background-color: #AD9BFA;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
 }
@@ -149,6 +148,10 @@ footer {
 @media (min-width: 768px) {
     /* For larger screens, display the menu inline and hide the hamburger icon */
     
+    main {
+        margin-top: 30px;
+    }
+
     header div {
         display: flex;
         justify-content: space-between;
