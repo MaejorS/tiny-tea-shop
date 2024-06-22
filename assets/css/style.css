@@ -30,7 +30,7 @@ main {
 }
 
 .landingpagebody {
-    background: url('../css/images/spoons-wth-tea.jpg') no-repeat center center/cover;
+    background: url('../images/spoons-wth-tea.jpg') no-repeat center center/cover;
 
 }
 
@@ -58,15 +58,16 @@ main {
 }
 
 #aboutus {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.7);
     /* Black background with 50% opacity */
+    border-radius: 2%;
+    width: 80%;
     color: white;
-    padding: 40px;
-    text-align: center;
-    width: 90%;
-    border-radius: 1%;
+    padding-bottom: 20px;
+    padding-top: 20px;
     border-style: double;
     border-color: bisque;
+    border-width: 3px;
 }
 
 /* General Styles */
@@ -166,21 +167,19 @@ header h1 {
 }
 
 /* Footer */
+
 #social-networks {
     text-align: center;
-    padding: 20px 0;
+    padding: 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     list-style-type: none;
     width: 100%;
-    /* Ensures the footer takes up full width */
-    margin: 0;
-    /* Removes default margin */
 }
 
-#social-networks li {
-    font-size: 160%;
-    padding: 0 20px;
+#social-networks i {
+    font-size: 80%;
+    padding: 0 50px;
     color: #3a3a3a
 }
 
@@ -191,6 +190,98 @@ header h1 {
     color: inherit;
     /* Inherits color from the li */
     text-decoration: none;
+}
+
+
+/* Enquire Page */
+
+.image {
+    background: url('../images/cozyteatable.jpg') no-repeat center center/cover;
+}
+
+#enquire {
+    background-position: 90%;
+    flex-grow: 1;
+    padding: 20px 5% 0 5%;
+    flex-grow: 1;
+}
+
+
+.enquiremain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacth1 {
+    color: #ffffff;
+    padding-top: 10px;
+    font-size: 80px;
+    font-family: "Caveat", cursive;
+    padding-bottom: 40px;
+}
+
+input {
+    background-color: #ffffff;
+    border-color: #151517;
+    font-size: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    width: 75%;
+    height: 30px;
+    border-radius: 10%;
+}
+
+textarea {
+    background-color: #ffffff;
+    width: 40%;
+    font-size: 20px;
+    padding: 16px 16px;
+    border-radius: 10px;
+    border-color: #151517;
+    margin-bottom: 25px;
+    width: 75%;
+    font-family: "Roboto Mono", monospace;
+}
+
+input:focus-within {
+    outline: none;
+    border-color: aquamarine;
+    border-width: 3px;
+}
+
+textarea:focus-within {
+    outline: none;
+    border-color: aquamarine;
+    border-width: 3px;
+}
+
+button {
+    background-color: aquamarine;
+    border-radius: 20px;
+    border-color: #151517;
+    font-size: 22px;
+    padding: 10px 18px;
+    text-align: center;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+button:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+/* Box around form */
+
+#signup-form {
+    color: #151517;
+    background-color: rgba(60, 60, 60, 0.6);
+    border-radius: 10%;
+    width: 100%;
 }
 
 
@@ -242,17 +333,11 @@ header h1 {
 
     /* larger background image to fit better for larger screens */
     .landingpagebody {
-        background: url('../css/images/teabar.jpg') no-repeat center center/cover;
-    }
-
-    /* Move translucent box up for larger screens */
-    #aboutus {
-        margin-top: -50px;
-        border-radius: 1%;
+        background: url('../images/spoons-wth-tea.jpg') no-repeat center center/cover;
     }
 
     .ttsmain {
-        font-size: 90px;
+        font-size: 150px;
         margin-top: -100px;
         padding-top: 60px;
         padding-bottom: 40px;
@@ -276,6 +361,19 @@ header h1 {
         font-size: 40px;
     }
 
+    /* Enquire form styles */
+    input {
+        width: 60%;
+    }
+    
+    textarea {
+        width: 60%;     
+}
+
+#signup-form {
+    width: 60%;
+    align-content: center;
+}
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
@@ -326,31 +424,17 @@ header h1 {
 
     /* larger background image to fit better for larger screens */
     .landingpagebody {
-        background: url('../css/images/teabar.jpg') no-repeat center center/cover;
+        background: url('../images/hero.jpg') no-repeat center center/cover;
     }
 
-    /* Move translucent box up for larger screens */
-    #aboutus {
-        margin-top: -150px;
-        border-radius: 1%;
-    }
 
     .ttsmain {
-        font-size: 80px;
+        font-size: 150px;
         margin-top: -100px;
         padding-top: 60px;
         padding-bottom: 40px;
     }
 
-    #aboutus {
-        font-size: 20px;
-        padding: 50px 150px;
-        width: 100%;
-        border-right-style: none;
-        border-left-style: none;
-        border-color: bisque;
-
-    }
 
     .block-text {
         margin-left: 30px;
@@ -360,3 +444,11 @@ header h1 {
     #social-networks li {
         font-size: 40px;
     }
+
+    /* Enquire From Styles */
+    #signup-form {
+        width: 60%;
+    }
+
+
+}

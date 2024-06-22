@@ -13,19 +13,19 @@
     <title>Tiny Tea Shop</title>
     <!--Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="enquirepage">
     <!-- Header -->
     <header class="header">
 
         <a>
             <div>
-                <h1 id="logo" class="tealogo"><i class="fa-solid fa-leaf" style="color: #f3e9e9;"></i> T.T.S</h1>
+                <h1 id="logo" class="tealogo"><i class="fa-solid fa-leaf" style="color: #f3e9e9;"></i> T.T</h1>
             </div>
         </a>
         <input type="checkbox" id="menu-bar" name="menu-bar">
@@ -44,22 +44,20 @@
 
     <!-- Main Content -->
 
-    <main class=enquirelandingpage>
-        <!--<</section>
-            <div class="content"> -->
-        <!-- About Us Tiny Tea Shop Translucent box center of page -->
-        <section id="aboutus">
-            <div>
-                <h1 class="ttsmain">Tiny Tea Shop</h1>
-                <br>
-                <p class="block-text">Welcome to the tiny tea shop, nestled in the charming heart of Dublin. At TTS, we
-                    believe that a cup of tea is more than just a drink—it's an experience. Our cozy little haven offers
-                    a delightful escape from the bustling city, inviting you to relax, unwind, and savor the moment.
-                </p>
-                <br>
-                <br>
-            </div>
+    <main class="image">
+        <section id="enquire">
+            <form class="enquiremain" id="signup-form" action="https://formdump.codeinstitute.net" method="POST">
+            <h1 class=contacth1>
+                Contact Us 
+            </h1>
+            <input type="text" name="first_name" placeholder="First Name" autocomplete="off" required>
+            <input type="text" name="last_name" placeholder="Last Name" autocomplete="off" required>
+            <input type="email" name="email" placeholder="example@email.com" autocomplete="off" required>
+            <textarea rows="5" cols="60" name="message" placeholder="Enter Message" autocomplete="off" required></textarea>
+            <button type="submit">Enquire Now</button>
+        </form>
         </section>
+</main>
     </main>
     <!--Footer-->
     <footer>
