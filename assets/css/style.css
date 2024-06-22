@@ -1,44 +1,84 @@
 /* Google fonts import*/
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Roboto Mono", monospace;
 }
 
-
 body {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: aqua;
-    background: url('../css/images/bwtea.jpg') no-repeat center center/cover;
-   
+    align-items: center;
+    justify-content: center;
 }
 
 main {
-    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    /* Centers content vertically */
+    flex-grow: 1;
+    /* Allows the main content to grow and fill available space */
+    width: 100%;
+    /* Takes up the full width of the viewport */
 }
 
-.hero div[
-    height
-    
-]
+.landingpagebody {
+    background: url('../css/images/spoons-wth-tea.jpg') no-repeat center center/cover;
 
-.content {
-    flex: 1;
-    
+}
+
+.tealogo {
+    font-family: "Caveat", cursive;
+}
+
+.aboutustextblock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+}
+
+.ttsmain {
+    font-family: "Caveat", cursive;
+    font-size: 59px;
+    font-weight: 1200;
+    padding-bottom: 10px;
+}
+
+.block-text {
+    display: block;
+    text-align: justify;
+}
+
+#aboutus {
+    background-color: rgba(0, 0, 0, 0.75);
+    /* Black background with 50% opacity */
+    color: white;
+    padding: 40px;
+    text-align: center;
+    width: 90%;
+    border-radius: 1%;
+    border-style: double;
+    border-color: bisque;
 }
 
 /* General Styles */
-
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #151517;
     padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 60px;
     color: white;
     text-decoration: none;
 }
@@ -53,6 +93,8 @@ header h1 {
 
 #logo {
     margin: 0;
+    color: white;
+    text-decoration: none;
 }
 
 /* Hide the menu by default */
@@ -81,108 +123,240 @@ header h1 {
 .nav-toggle-label {
     cursor: pointer;
     font-size: 24px;
-    display: none; /* Hide the label by default */
+    display: none;
+    /* Hide the label by default */
 }
 
 /* Show the menu when the checkbox is checked */
-#menu-bar:checked ~ .navbar {
+#menu-bar:checked~.navbar {
     display: block;
+
 }
 
 #menu-bar {
     display: none;
 }
-    /* Show the label and hide the menu items for mobile view */
-    .nav-toggle-label {
-        display: block;
-    }
 
-    .navbar {
-        width: 100%;
-        position: absolute;
-        top: 50px; /* Adjust based on header height */
-        left: 0;
-        background-color: inherit;
-    }
+/* Show the label and hide the menu items for mobile view */
+.nav-toggle-label {
+    display: block;
+}
 
-    .navbar ul {
-        display: flex;
-        flex-direction: column;
-    }
+.navbar {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    /* Adjust based on header height */
+    left: 0;
+    background-color: inherit;
+}
 
-    .navbar li {
-        border-bottom: 1px solid #444;
-    }
-
-    .navbar li:hover {
-        text-decoration: underline;
-        text-decoration-color: #ffffff;
-    }
-
-/* Footer */
-
-footer {
-    background-color: #ffffff;
+.navbar ul {
     display: flex;
     flex-direction: column;
 }
 
+.navbar li {
+    border-bottom: 1px solid #444;
+}
+
+.navbar li:hover {
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+}
+
+/* Footer */
 #social-networks {
     text-align: center;
     padding: 20px 0;
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
+    width: 100%;
+    /* Ensures the footer takes up full width */
+    margin: 0;
+    /* Removes default margin */
 }
 
 #social-networks li {
     font-size: 160%;
-    padding: 1%;
+    padding: 0 20px;
     color: #3a3a3a
 }
 
-
+/* Ensure sufficient spacing for smaller screens */
+#social-networks li a {
+    display: inline-block;
+    padding: 10px;
+    color: inherit;
+    /* Inherits color from the li */
+    text-decoration: none;
+}
 
 
 /* Media query: tablets and larger (768px and up) */
 @media (min-width: 768px) {
-    /* For larger screens, display the menu inline and hide the hamburger icon */
-    
-    main {
-        margin-top: 30px;
+
+    /* Adjust header for larger screens */
+    .header {
+        height: 60px;
+        /* Keep the fixed height */
+        padding: 10px 20px;
     }
 
-    header div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-
-    .nav-toggle-label {
-        display: none;
-    }
-
-
+    /* Display the navbar horizontally and always visible */
     .navbar {
         display: flex;
-        justify-content: flex-end; /* Aligns the menu to the right */
-        
+        position: static;
+        /* Make it part of the normal document flow */
+        background-color: transparent;
+        /* Remove background color */
+        width: auto;
+        /* Adjust width */
     }
 
     .navbar ul {
         display: flex;
         flex-direction: row;
+        /* Horizontal layout */
+        justify-content: flex-end;
+        /* Align items to the right */
+        width: 100%;
+        /* Take full width */
     }
 
     .navbar li {
         border-bottom: none;
+        margin: 0 10px;
+        /* Add margin between menu items */
     }
 
-    .navbar a {
-        padding: 10px 30px;
+    /* Hide the hamburger menu */
+    .nav-toggle-label {
+        display: none;
     }
+
+    #menu-bar {
+        display: none;
+    }
+
+    /* larger background image to fit better for larger screens */
+    .landingpagebody {
+        background: url('../css/images/teabar.jpg') no-repeat center center/cover;
+    }
+
+    /* Move translucent box up for larger screens */
+    #aboutus {
+        margin-top: -50px;
+        border-radius: 1%;
+    }
+
+    .ttsmain {
+        font-size: 90px;
+        margin-top: -100px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    #aboutus {
+        font-size: 20px;
+        padding: 50px 50px;
+        width: 80%;
+        border-style: double;
+        border-color: bisque;
+
+    }
+
+    .block-text {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    #social-networks li {
+        font-size: 40px;
+    }
+
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
-@media screen and (min-width: 992px)
+@media screen and (min-width: 992px) {
+
+    /* Adjust header for larger screens */
+    .header {
+        height: 60px;
+        /* Keep the fixed height */
+        padding: 10px 20px;
+    }
+
+    /* Display the navbar horizontally and always visible */
+    .navbar {
+        display: flex;
+        position: static;
+        /* Make it part of the normal document flow */
+        background-color: transparent;
+        /* Remove background color */
+        width: auto;
+        /* Adjust width */
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        /* Horizontal layout */
+        justify-content: flex-end;
+        /* Align items to the right */
+        width: 100%;
+        /* Take full width */
+    }
+
+    .navbar li {
+        border-bottom: none;
+        margin: 0 10px;
+        /* Add margin between menu items */
+    }
+
+    /* Hide the hamburger menu */
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #menu-bar {
+        display: none;
+    }
+
+    /* larger background image to fit better for larger screens */
+    .landingpagebody {
+        background: url('../css/images/teabar.jpg') no-repeat center center/cover;
+    }
+
+    /* Move translucent box up for larger screens */
+    #aboutus {
+        margin-top: -150px;
+        border-radius: 1%;
+    }
+
+    .ttsmain {
+        font-size: 80px;
+        margin-top: -100px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    #aboutus {
+        font-size: 20px;
+        padding: 50px 150px;
+        width: 100%;
+        border-right-style: none;
+        border-left-style: none;
+        border-color: bisque;
+
+    }
+
+    .block-text {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    #social-networks li {
+        font-size: 40px;
+    }
