@@ -1,7 +1,6 @@
 /* Google fonts import*/
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
 * {
     padding: 0;
     margin: 0;
@@ -58,30 +57,31 @@ main {
 }
 
 #aboutus {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(38, 64, 39, 0.7);
     /* Black background with 50% opacity */
     border-radius: 2%;
     width: 80%;
     color: white;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding: 20px;
     border-style: double;
     border-color: bisque;
     border-width: 3px;
 }
 
 /* General Styles */
+
 .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #473144;
+    padding: 10px 20px;
+    height: 60px;
+    color: #ffe3e0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #151517;
-    padding: 10px 20px;
-    width: 100%;
-    box-sizing: border-box;
-    height: 60px;
-    color: white;
-    text-decoration: none;
+    z-index: 9999;
 }
 
 .content {
@@ -94,7 +94,7 @@ header h1 {
 
 #logo {
     margin: 0;
-    color: white;
+    color: #ffe3e0;
     text-decoration: none;
 }
 
@@ -114,7 +114,7 @@ header h1 {
 }
 
 .navbar a {
-    color: white;
+    color: #ffe3e0;
     text-decoration: none;
     display: block;
     padding: 10px 20px;
@@ -168,6 +168,16 @@ header h1 {
 
 /* Footer */
 
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #473144;
+    text-align: center;
+    z-index: 9999;
+    padding: 10px 0;
+}
+
 #social-networks {
     text-align: center;
     padding: 0;
@@ -178,9 +188,9 @@ header h1 {
 }
 
 #social-networks i {
-    font-size: 80%;
-    padding: 0 50px;
-    color: #3a3a3a
+    font-size: 30px;
+    padding: 0 30px;
+    color: #ffe3e0
 }
 
 /* Ensure sufficient spacing for smaller screens */
@@ -191,7 +201,6 @@ header h1 {
     /* Inherits color from the li */
     text-decoration: none;
 }
-
 
 /* Enquire Page */
 
@@ -205,7 +214,6 @@ header h1 {
     padding: 20px 5% 0 5%;
     flex-grow: 1;
 }
-
 
 .enquiremain {
     display: flex;
@@ -279,11 +287,68 @@ button:hover {
 
 #signup-form {
     color: #151517;
-    background-color: rgba(60, 60, 60, 0.6);
-    border-radius: 10%;
+    background-color: rgba(38, 64, 39, 0.7);
+    border-radius: 2%;
     width: 100%;
+    border-style: double;
+    border-color: bisque;
 }
 
+/* Gallery Section */
+
+.gallery {
+    background: #cbb3bf;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 80px 20px 0 20px;
+}
+
+.container .heading {
+    width: 50%;
+    padding-bottom: 50px;
+}
+
+.container .heading h3 {
+    font-size: 3em;
+    font-weight: bolder;
+    border-bottom: 3px solid #210203;
+    color: #210203;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container .heading h3 span {
+    font-weight: 100;
+    padding-left: 5px;
+}
+
+.shop img {
+    width: 100%;
+    line-height: 1em;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shop {
+    line-height: 0;
+}
+
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    .shop {
+        column-count: 2;
+        column-gap: 0;
+    }
+}
 
 /* Media query: tablets and larger (768px and up) */
 @media (min-width: 768px) {
@@ -363,17 +428,22 @@ button:hover {
 
     /* Enquire form styles */
     input {
+        width: 75%;
+    }
+
+    textarea {
+        width: 75%;
+    }
+
+    #signup-form {
         width: 60%;
     }
-    
-    textarea {
-        width: 60%;     
-}
 
-#signup-form {
-    width: 60%;
-    align-content: center;
-}
+    /* Gallery styles */
+
+    .shop {
+        column-count: 3;
+    }
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
@@ -427,14 +497,12 @@ button:hover {
         background: url('../images/hero.jpg') no-repeat center center/cover;
     }
 
-
     .ttsmain {
         font-size: 150px;
         margin-top: -100px;
         padding-top: 60px;
         padding-bottom: 40px;
     }
-
 
     .block-text {
         margin-left: 30px;
@@ -445,10 +513,21 @@ button:hover {
         font-size: 40px;
     }
 
-    /* Enquire From Styles */
-    #signup-form {
-        width: 60%;
+    input {
+        width: 75%;
     }
 
+    textarea {
+        width: 75%;
+    }
 
-}
+    /* Enquire From Styles */
+    #signup-form {
+        width: 40%;
+    }
+
+    /* Gallery */
+    .shop {
+        column-count: 4;
+
+    }
