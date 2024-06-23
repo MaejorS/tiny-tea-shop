@@ -171,6 +171,7 @@ header h1 {
 footer {
     position: fixed;
     bottom: 0;
+    height: fit-content;
     width: 100%;
     background-color: #473144;
     text-align: center;
@@ -188,13 +189,13 @@ footer {
 
 #social-networks i {
     font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: #ffe3e0
 }
 
 /* Ensure sufficient spacing for smaller screens */
 #social-networks li a {
-    display: inline-block;
-    padding: 10px;
     color: inherit;
     /* Inherits color from the li */
     text-decoration: none;
@@ -202,15 +203,8 @@ footer {
 
 /* Enquire Page */
 
-.image {
+.enquirepage {
     background: url('../images/cozyteatable.jpg') no-repeat center center/cover;
-}
-
-#enquire {
-    background-position: 60%;
-    flex-grow: 1;
-    padding: 20px 5% 0 5%;
-    flex-grow: 1;
 }
 
 .enquiremain {
@@ -218,14 +212,15 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .contacth1 {
     color: #ffffff;
     padding-top: 10px;
-    font-size: 60px;
+    font-size: 50px;
     font-family: "Caveat", cursive;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 input {
@@ -292,6 +287,10 @@ button:hover {
     border-color: bisque;
 }
 
+form {
+    margin: 30px;
+    
+}
 /* Gallery Section */
 
 .gallery {
@@ -340,6 +339,21 @@ button:hover {
     line-height: 0;
 }
 
+@media (orientation: landscape) {
+    main {
+        padding-top: 20px; /* Ensure there's enough space at the top */
+    }
+    .enquiremain {
+        padding: 20px; /* Ensure there's enough space inside the form */
+    }
+    .contacth1 {
+        padding-top: 30px; /* Increase padding to ensure visibility */
+    }
+
+
+    
+}
+
 /* Media query: large or landscape phones (576px and up) */
 @media screen and (min-width: 576px) {
     .shop {
@@ -347,7 +361,6 @@ button:hover {
         column-gap: 0;
     }
 }
-
 /* Media query: tablets and larger (768px and up) */
 @media (min-width: 768px) {
 
