@@ -175,7 +175,6 @@ footer {
     background-color: #473144;
     text-align: center;
     z-index: 9999;
-    padding: 10px 0;
 }
 
 #social-networks {
@@ -189,7 +188,6 @@ footer {
 
 #social-networks i {
     font-size: 30px;
-    padding: 0 30px;
     color: #ffe3e0
 }
 
@@ -209,7 +207,7 @@ footer {
 }
 
 #enquire {
-    background-position: 90%;
+    background-position: 60%;
     flex-grow: 1;
     padding: 20px 5% 0 5%;
     flex-grow: 1;
@@ -225,9 +223,9 @@ footer {
 .contacth1 {
     color: #ffffff;
     padding-top: 10px;
-    font-size: 80px;
+    font-size: 60px;
     font-family: "Caveat", cursive;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 }
 
 input {
@@ -237,7 +235,7 @@ input {
     padding-left: 5px;
     padding-right: 5px;
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     width: 75%;
     height: 30px;
     border-radius: 10%;
