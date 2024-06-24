@@ -203,8 +203,10 @@ footer {
 
 /* Enquire Page */
 
-.enquirepage {
-    background: url('../images/cozyteatable.jpg') no-repeat center center/cover;
+
+
+#enquire-page-image {
+    background: url('../images/pinktea.jpg') no-repeat center center/cover;
 }
 
 .enquiremain {
@@ -213,9 +215,33 @@ footer {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    padding-top: 50px;
+    color: #210203;
+    font-size: 20px;
+    font-weight: 450;
 }
 
-.contacth1 {
+
+
+.enquiremainform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.section-header {
+    padding-bottom: 10px;
+}
+
+
+
+.time {
+    padding-left: 10px;
+}
+
+.contacth2 {
     color: #ffffff;
     padding-top: 10px;
     font-size: 50px;
@@ -238,7 +264,7 @@ input {
 
 textarea {
     background-color: #ffffff;
-    width: 40%;
+   
     font-size: 20px;
     padding: 16px 16px;
     border-radius: 10px;
@@ -282,15 +308,16 @@ button:hover {
     color: #151517;
     background-color: rgba(38, 64, 39, 0.7);
     border-radius: 2%;
-    width: 100%;
+    width: 80%;
     border-style: double;
     border-color: bisque;
 }
 
 form {
-    margin: 30px;
-    
+    margin-bottom: 100px;
+    margin-top: 50px;
 }
+
 /* Gallery Section */
 
 .gallery {
@@ -349,9 +376,6 @@ form {
     .contacth1 {
         padding-top: 30px; /* Increase padding to ensure visibility */
     }
-
-
-    
 }
 
 /* Media query: large or landscape phones (576px and up) */
@@ -448,6 +472,15 @@ form {
 
     #signup-form {
         width: 60%;
+    }
+
+    /* Ensures that the main content is not blocked by fixed header and footer*/
+    form {
+        margin-bottom: 100px;
+    }
+
+    .enquiremain {
+        padding-top: 50px;
     }
 
     /* Gallery styles */
