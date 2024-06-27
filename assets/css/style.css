@@ -1,6 +1,7 @@
 /* Google fonts import*/
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -30,10 +31,7 @@ main {
 
 .landingpagebody {
     background: url('../images/spoons-wth-tea.jpg') no-repeat center center/cover;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 100px;
-    padding-top: 100px;
+
 }
 
 .tealogo {
@@ -69,56 +67,6 @@ main {
     border-style: double;
     border-color: bisque;
     border-width: 3px;
-    display: flex;
-    flex-direction: column;
-}
-
-.section-style {
-    display: flex;
-    align-items: center;
-}
-
-li {
-    list-style-type: none;
-}
-
-#reasons-section {
-    background-color: rgba(38, 64, 39, 0.7);
-    display: block;
-    position: relative;
-    text-align: center;
-    color: #ffffff;
-    border-style: double;
-    border-color: bisque;
-    margin-top: 20px;
-    box-sizing: border-box;
-    width: 80%;
-    
-
-
-}
-
-#reasons-section h2 {
-    padding-top: 20px;
-    
-}
-
-#reasons-header {
-    position: relative;
-    margin: auto;
-    text-align: center;
-}
-
-#reasons-list h3 {
-    padding-top: 20px;
-    padding-bottom: 10px;
-}
-
-.paragraph-text {
-    text-align: justify;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
 }
 
 /* General Styles */
@@ -294,6 +242,8 @@ footer {
     padding-left: 10px;
 }
 
+
+
 .contacth2 {
     color: #ffffff;
     padding-top: 10px;
@@ -317,7 +267,7 @@ input {
 
 textarea {
     background-color: #ffffff;
-   
+
     font-size: 20px;
     padding: 16px 16px;
     border-radius: 10px;
@@ -421,13 +371,18 @@ form {
 
 @media (orientation: landscape) {
     main {
-        padding-top: 20px; /* Ensure there's enough space at the top */
+        padding-top: 20px;
+        /* Ensure there's enough space at the top */
     }
+
     .enquiremain {
-        padding: 20px; /* Ensure there's enough space inside the form */
+        padding: 20px;
+        /* Ensure there's enough space inside the form */
     }
+
     .contacth1 {
-        padding-top: 30px; /* Increase padding to ensure visibility */
+        padding-top: 30px;
+        /* Increase padding to ensure visibility */
     }
 }
 
@@ -438,6 +393,7 @@ form {
         column-gap: 0;
     }
 }
+
 /* Media query: tablets and larger (768px and up) */
 @media (min-width: 768px) {
 
@@ -489,8 +445,6 @@ form {
         background: url('../images/spoons-wth-tea.jpg') no-repeat center center/cover;
     }
 
-
-
     .ttsmain {
         font-size: 150px;
         margin-top: -100px;
@@ -498,7 +452,6 @@ form {
         padding-bottom: 40px;
     }
 
-    
     #aboutus {
         font-size: 20px;
         padding: 50px 50px;
@@ -509,13 +462,9 @@ form {
     }
 
     .block-text {
-        margin-left: 90px;
-        margin-right: 90px;
+        margin-left: 60px;
+        margin-right: 60px;
     }
-
-    /* Reasons to love us */
-   
-
 
     #social-networks li {
         font-size: 40px;
@@ -625,15 +574,6 @@ form {
         width: 75%;
     }
 
-    /* Reasons Why Section */
-
-    #reasons-section {
-        font-size: 20px;
-        margin-left: 30px;
-        margin-right: 30px;
-        padding: 50px 50px;
-    }
-
     /* Enquire From Styles */
     #signup-form {
         width: 40%;
@@ -642,6 +582,5 @@ form {
     /* Gallery */
     .shop {
         column-count: 4;
-
     }
 }

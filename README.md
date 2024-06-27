@@ -68,18 +68,63 @@ Additionally, if I had given the site more time, we would have an events section
 
 ### Validator Testing
 
+
 - **HTML**
+ 
+| Page          | W3C URL       | Screebshot                         		         | Notes
+|:------------- |:------------- |:---------------------------------------------- |:--------|
+| Main    | https://validator.w3.org/   | ![Alt text 1](./assets/images/index-html-validator.png)  | Working|
+| Gallery    | https://validator.w3.org/    | ![Alt text 2](./assets/images/gallery-html-validator.png)| No errors found|
+| Enquire     | https://validator.w3.org/    | ![Alt text 3](./assets/images/enquire-html-validtor.png) | No erros found|
+
+
+
+
+- **CSS**
+
+| File       | Jigsaw URL    | Screenshot                         		         | Notes
+|:------------- |:------------- |:---------------------------------------------- |:--------|
+| style.css     | Content 2     | ![Alt text 1](./assets/images/css-validator.png) | No errors found
+
+
+  - No errors were found when passing through the official (Jigsaw) validator.
+
+  -**Browswer Compatibility**
+
+  | Browser         | Main      | About                         		         | Enquire      |Notes
+|:------------- |:------------- |:---------------------------------------------- |:---------|:-------|
+| Content 1     | Content 2     | ![Alt text 1](https://via.placeholder.com/100) |
+| Content 4     | Content 5     | ![Alt text 2](https://via.placeholder.com/100) |
+| Content 7     | Content 8     | ![Alt text 3](https://via.placeholder.com/100) |
+| Content 10    | Content 11    | ![Alt text 4](https://via.placeholder.com/100) |
+| Content 13    | Content 14    | ![Alt text 5](https://via.placeholder.com/100) |
+| Content 16    | Content 17    | ![Alt text 6](https://via.placeholder.com/100) |
+
+-**Lighthouse Audit**
+
+-**Responsiveness**
+
+| Page          | W3C URL       | Screebshot                         		         | Notes
+|:------------- |:------------- |:---------------------------------------------- |:--------
+| Main Page    | Content 2     | ![Alt text 1](https://via.placeholder.com/100) |
+| Gallery    | Content 5     | ![Alt text 2](https://via.placeholder.com/100) |
+| Enquire     | Content 8     | ![Alt text 3](https://via.placeholder.com/100) |
+| Content 10    | Content 11    | ![Alt text 4](https://via.placeholder.com/100) |
+| Content 13    | Content 14    | ![Alt text 5](https://via.placeholder.com/100) |
+| Content 16    | Content 17    | ![Alt text 6](https://via.placeholder.com/100) |
+
+
+
+### Unfixed Bugs
+
+There were no bugs to report upon testing that I could see after debuggin the issues below.
+
+-**Debbuging**
   - Initially, I found a few stray tags in the icon section of the footer, but removed these.
   - When adding another feature, I found a parse error, but also corrected this.
   - I also initially created the reasons list using an unordered list and then changed it to divs but forgot to remove the ul tags. Although it rendered perfectly on the laptop, when I deployed the site again, none of my styles had been applied. I put the code into the code validator and it immediately pointed out that the div element cannot be the child of the li element. So I adjusted accordingly.
   - I also used an h2 tag, but closed it with an h3 tag and the validator highlighted this.
   - Eventually, no errors were returned when passing through the official W3C validator.
-- **CSS**
-  - No errors were found when passing through the official (Jigsaw) validator.
-
-### Unfixed Bugs
-
-There were no bugs to report upon testing that I could see.
 
 ## Deployment
 
